@@ -1,0 +1,168 @@
+Data structure is a way to organise data in memory so that we can access in easily and effictively in future
+data structure can be in two forms
+1 Linear 
+2 Non linear 
+
+*linear
+In linear ds every element has a unique immediate predeccesor and a unique immediate successor.
+or 
+In linear ds elements are stored in continuous memory location.X
+or
+In linear ds elements are stored in linear order or in like in memory.X
+
+Eg:
+1Array 
+2Linked List: In a linked list elements are stored in non continuous memory location.
+              Linked list simply a collection of node and each node consists of two components .
+                      1Data part 2 Address of next node.
+             Header contains the address of first node of the list.
+
+         ****Drawback is that we can move only in forward direction.
+3Queue : In this ds insertion and deletion takes place at different ends.Insetion at rear and deletion at first.In a queque accessing order is first in first out(Fifo)
+4Stacks: In a stack insertion and deletion takes place at one end only which is called as top of the stack.Accessing order of a stack is Lifo(last in first out)
+*Non Linear
+In this element can have more than one immediate predeccessor and immediate successor.
+1 Tree 
+2 Graph
+The main difference between tree and graph is that a cycle is possible in the tree but not in graph.
+
+
+Algorithm
+
+It is sequence of steps . if you follow these steps then you can call a particular problem.
+it is written in a pseudo form ( which is a mixture of english and programming construct )
+it should have following characteristics 
+. Every step of an algorithm should be unambigious(unique interpretation)
+. Finiteness -- Every step should be terminated in finite amount of step
+. Easy to analyse
+. Every step of an algoritm should be easy so that we can analyse it by using pen and pencil only.
+. Input -- Algo shhould have some input.
+. Output -- Algo should produce atleast one output so that we can check its functionality
+
+To solve any problem we can have more than one algo then which algo is best is simply decided based on either space complexity and time complexity.
+Asympotic notations-- 
+It means a line near to curve by these notoations.WE use these notations to represt the upper bound and lower bound of a functions (paper me ayega)
+Big O notation--
+
+Omega notation is used to represent the lower bound of a function.  
+
+f(n)=Omega(g(n))
+if and only if 
+f(n)<=c.g(n)
+for some constant c and n>=No
+Omega notation is used to represent the lower bound of a function.  
+
+Theta notation 
+this notation is used to represent the upper bound and lower bound of a function means our function sandwiched between thesee two functions.
+f(n)=theta(g(n))
+if and only if 
+cg(n)<=f(n)<=c.g(n)
+for some constant c and n>=No
+
+Deletion of first
+Step 1. if header=NULL then write list empty and return 
+2. if header =last then 
+      set ptr:= header;
+      set header"=Null
+      set last:=null
+      Set link[ptr]:=Avail
+      set Avail:ptr
+3 set  ptr:=header
+  Set header:=link[header]
+4 Stop
+9887726394 pp sir
+
+
+
+In a single linked list Only forward movement is possible .if you want to move backward then it is not possible beacause in a singly linked list we contain the address of first node only.
+The solution of this problem by circular linked list.
+
+Doubly linked list
+In this every node contains the address of nesxt node and previous node of the list. By using these addresses we can move either in forward direction or in backward direction.
+In this every node has three components 
+1 prev -this simply contains the address of previous node if any otherwise contain null
+2 Data 
+3 Next- this simply contains the address of next node.
+Creation of doubly
+Step1: If avail =NULL then memory not available and return.
+Step2: Set ptr:=Avail and set Avail:next[Avail] and set prev[Next[avail]]:=Null.
+step3 Read data into info[ptr].and set prev[ptr]:=null and set next[ptr]:=null. and set header:=ptr and set last:=ptr.
+Step4 Repeat step 5 while ch=1, 
+Step5 if avail =NUll them memory full and return 
+      Set ptr:=Avail and set Avail:next[Avail] and set prev[Next[avail]]:=Null.
+      Read data into info[ptr] 
+      Set last:= ptr and set prev[ptr]:=last
+      Set last:=ptr ans set next[ptr]:=NUll.
+      Ask the choice again and store it in ch variable.
+Insert first in doubly
+Step1: If avail =NULL then memory not available and return.
+Step2: Set ptr:=Avail and set Avail:next[Avail] and set prev[Next[avail]]:=Null.
+step3 if header=null then set header=ptr and last= ptr: and set prev[ptr]=null and next[ptr]= null
+      else 
+          Set prev[header]:=ptr and set next[ptr]:=header and set prev[ptr]:=null and header:= ptr.
+Step4 Stop
+Insert Last
+
+Step1: If avail =NULL then memory not available and return.
+Step2: Set ptr:=Avail and set Avail:next[Avail] and set prev[Next[avail]]:=Null.
+step3 if header=null then set header=ptr and last= ptr: and set prev[ptr]=null and next[ptr]= null
+      else 
+          Set next[last]:=ptr and set prev[ptr]:=last and set next[ptr]:=null and last:= ptr.
+Step4 Stop
+Deletion in a Doubly Linked list
+Step1 If header=null the write deletion not possible and return
+Step2 if header=last then set:=NULL and last:=NULL and set ptr:=header
+      Set next[ptr]:=Avail and set Avail:=ptr
+      else  
+        set ptr:=header and header:=nexte[header] and set prev[header]:=NULL and set next[ptr]:=avail and set avail:=ptr.
+                                                                            
+Step3 stop
+
+Step 1 If header=null the write deletion not possible and return
+step 2 if header=last and set ptr:=header and last:=NULL and set next[ptr]:=Avail and set avial:=ptr.
+       else 
+       next[prev[last]]:=NULL and set prev[last]:=Null and set next[last]:=avail and set prev[avail]:=last. and set prev[last]:=null
+step 3 Stop
+
+
+
+Stacks 
+
+Stacks are the linear data structure in which insertion and deletion takes place only at one end which is called as top of the stack. 
+Accessing order is last in first out (LIFO)
+On the stack we can perform two operation push and pull.
+Push operation is used to insert new value into the stack
+Algo for push
+Step1 if avail =null then write stackoverflow and return;
+Step2 set ptr=:avail and then set avail:=next[avail]
+step3 read data into info[ptr] and set next[ptr]:=top and set top:=ptr 
+Step 4 stop
+
+
+Algo for pop
+
+Step1 if top=NULL then write stackunderflow and return 
+step2 set ptr:=top and set top:=next[top] and then next[ptr]:=avail and set avail:=ptr.
+step3 stop
+
+
+Stack applications 
+*Expression
+1 Any expression can be written in three different ways:
+  Infix(a+b) ,, Prefix(+ab) ,, Postfix.(ab+)
+These different forms simply depends on position of operator
+Conversion from one form to another expression form 
+1 a+b*c
+a+bc*
+a+r
+ar+
+
+Convert following prefix into postfix
+a*b*c/d-e+f*g*k/l
+ab*c/d-e+f*g*k/l
+(rd/)-e+f*g*k/l
+f-e+f*g*k/l
+ug*k/l
+tl/
+
+cr is 
