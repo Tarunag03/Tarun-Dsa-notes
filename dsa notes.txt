@@ -162,7 +162,6 @@ a*b*c/d-e+f*g*k/l
 ab*c/d-e+f*g*k/l
 (rd/)-e+f*g*k/l
 f-e+f*g*k/l
-ug*k/l
-tl/
-
-cr is 
+f-e+t*k/l
+f-e+p/l
+f-e+u
